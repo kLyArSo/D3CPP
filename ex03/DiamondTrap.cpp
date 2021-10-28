@@ -19,6 +19,16 @@ DiamondTrap::DiamondTrap(std::string Name)
     std::cout << "| DiamondTrap | " << this->Name << " is\n"; 
     
 }
+
+void    DiamondTrap::whoAmI()
+{
+    std::cout << "Diamond->Name = " << this->Name<< std::endl;
+    std::cout << "ClapTrap->Name = " << ClapTrap::Name << std::endl;
+}
+void    DiamondTrap::attack(std::string target)
+{
+    ScavTrap::attack(target);
+}
 void    DiamondTrap::operator=(const DiamondTrap& other)
 {
     this->Name = other.Name;
@@ -31,7 +41,6 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 {
     *this = other;
 }
-
 DiamondTrap::~DiamondTrap()
 {
     std::cout << "| DiamondTrap | " << this->Name << " is no longer\n"; 
